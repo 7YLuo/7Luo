@@ -1,0 +1,124 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+    color: #333;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+    /* dark transparent layer on top of background image */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 0;
+    }
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+}
+
+.subtitle {
+    margin: 0 0 40px;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.6;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 220px));
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.menu-button {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 92px;
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #2f2a26;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+    .menu-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 12%;
+        width: 76%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.75);
+    }
+
+    .menu-button:hover {
+        transform: translateY(-5px) scale(1.02);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+    }
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+
+    .menu-button {
+        min-height: 75px;
+        font-size: 1rem;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+}
