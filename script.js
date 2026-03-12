@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll(".menu-button");
+﻿const buttons = document.querySelectorAll(".menu-button");
 
 buttons.forEach((button) => {
     button.addEventListener("mousemove", (e) => {
