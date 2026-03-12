@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8" />
@@ -6,20 +6,128 @@
     <title>荣誉展馆</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="honors-page">
     <div class="container">
         <h1>荣誉展馆</h1>
-        <p class="subtitle">这里展示你的战绩、排名、证书或高光时刻。</p>
+        <p class="subtitle">个人历史荣誉展示页</p>
 
-        <div class="content-box">
-            <p>这里可以放：</p>
-            <p>• 段位截图</p>
-            <p>• 排名截图</p>
-            <p>• 比赛成绩</p>
-            <p>• 高光操作展示</p>
+        <div class="honors-layout">
+            <!-- 左侧选项栏 -->
+            <aside class="honors-sidebar">
+                <button class="honor-tab active" data-target="rank-panel">历史段位</button>
+                <button class="honor-tab" data-target="badge-panel">角色牌子</button>
+                <button class="honor-tab" data-target="tournament-panel">赛事经验</button>
+                <button class="honor-tab" data-target="highlight-panel">高光剪辑</button>
+            </aside>
+
+            <!-- 右侧抽屉内容区 -->
+            <section class="honors-drawer show" id="honorsDrawer">
+                <div class="drawer-body">
+                    <article class="drawer-panel active" id="rank-panel">
+                        <h2>历史段位</h2>
+                        <p class="panel-intro">段位记录，赛季最高段位、胜率等</p>
+
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <h3>赛季A</h3>
+                                <p>TBD</p>
+                            </div>
+                            <div class="info-card">
+                                <h3>赛季B</h3>
+                                <p>TBD</p>
+                            </div>
+                            <div class="info-card">
+                                <h3>赛季C</h3>
+                                <p>TBD</p>
+                            </div>
+                            <div class="info-card">
+                                <h3>赛季D</h3>
+                                <p>TBD</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="drawer-panel" id="badge-panel">
+                        <h2>角色牌子</h2>
+                        <p class="panel-intro">擅长角色、角色牌子等</p>
+
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <h3>角色 A</h3>
+                                <p>TBD</p>
+                            </div>
+                            <div class="info-card">
+                                <h3>角色 B</h3>
+                                <p>TBD</p>
+                            </div>
+                            <div class="info-card">
+                                <h3>角色 C</h3>
+                                <p>TBD</p>
+                            </div>
+                            <div class="info-card">
+                                <h3>角色 D</h3>
+                                <p>TBD</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="drawer-panel" id="tournament-panel">
+                        <h2>赛事经验</h2>
+                        <p class="panel-intro">比赛经历、赛事名次等</p>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>赛事经历 1</h3>
+                                    <p>参与过xx赛事</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>赛事经历 2</h3>
+                                    <p>参与过xx赛事</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>赛事经历 3</h3>
+                                    <p>参与过xx赛事</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="drawer-panel" id="highlight-panel">
+                        <h2>高光剪辑</h2>
+                        <p class="panel-intro">TBD</p>
+
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <h3>高光剪辑 01</h3>
+                                <p>TBD</p>
+                            </div>
+                            <div class="info-card">
+                                <h3>高光剪辑 02</h3>
+                                <p>TBD</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-link-box">
+                            <a href="#" class="highlight-link">点击查看剪辑链接TBD</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </div>
 
-        <a href="index.html" class="menu-button">返回主页</a>
+        <a href="index.html" class="page-back">返回主页</a>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
